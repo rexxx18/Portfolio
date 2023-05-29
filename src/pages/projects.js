@@ -5,7 +5,11 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import Project1 from '../../public/images/projects/crypto-screener-cover-image.jpg'
-import Image from 'next/image'
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+
+const FramerImage=motion(Image)
 
 
 
@@ -16,7 +20,7 @@ const FeaturedProject=({type,title,summary,img,link,githubLink})=>{
         <article className='w-full relative flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12'>
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
             <Link className='w-1/2 cursor-pointer overflow-hidden rounded-lg' href={link} target='_blank'>
-                <Image src={img} alt={title} className="w-full h-auto" />
+                <FramerImage whileHover={{scale:1.05}} transition={{duration:0.2}} src={img} alt={title} className="w-full h-auto" />
             </Link>
             <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
                 <span className='text-primary font-medium text-xl '>{type}</span>
