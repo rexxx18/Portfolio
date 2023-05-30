@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 
 const useThemeSwitcher = () => {
 
@@ -53,9 +53,7 @@ const useThemeSwitcher = () => {
 
     },[mode])
 
-  return (
-    <div>useThemeSwitcher</div>
-  )
+  return [mode,setMode];
 }
 
 export default useThemeSwitcher
