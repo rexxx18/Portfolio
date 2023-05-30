@@ -42,6 +42,7 @@ function Navbar() {
                 <PinterestIcon className={'w-6 mx-4'}/></motion.a>
                 <motion.a whileHover={{y:-2}} whileTap={{scale:0.9}} href="/" target={'_blank'}>
                 <DribbbleIcon className={'w-6 ml-4'}/></motion.a>
+                <button>Hi</button>
         </nav>
         <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
         <Logo />
