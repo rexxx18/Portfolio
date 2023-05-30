@@ -51,11 +51,11 @@ const Article=({title,img,date,link})=>{
     viewport={{once:true}}
     className="relative w-full p-4 py-6 my-4 
     rounded-xl flex items-center 
-    justify-between bg-light text-dark 
+    justify-between bg-light text-dark dark:bg-dark dark:text-light
     first:mt-0 border border-solid 
-    border-dark border-r-4 border-b-4">
+    border-dark dark:border-light border-r-4 border-b-4">
      <MovingImage title={title} img={img} link ={link} />
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span className="text-primary dark:text-primaryDark font-semibold pl-4">{date}</span>
 
     </motion.li>
   )
@@ -63,8 +63,8 @@ const Article=({title,img,date,link})=>{
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+    <li className="relative col-span-1 w-full p-4 bg-light dark:bg-dark border border-solid dark:border-light border-dark rounded-2xl">
+      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl" />
       <Link
         className="w-full cursor-pointer overflow-hidden rounded-lg inline-block"
         href={link}
@@ -84,7 +84,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         </h2>
       </Link>
       <p className="text-sm mb-2">{summary}</p>
-      <span className="text-primary font-sembold">{time}</span>
+      <span className="text-primary dark:text-primaryDark font-sembold">{time}</span>
     </li>
   );
 };
@@ -96,7 +96,7 @@ const Articles = () => {
         <title>Codebucks | Articles Page</title>
         <meta neme="description" content="any description" />
       </Head>
-      <main className="w-full mb-16 flex flex-col items-center justify-center">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText text="Words Can Change The World!" className="mb-16" />
           <ul className="grid grid-cols-2 gap-16">

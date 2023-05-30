@@ -42,7 +42,7 @@ function Navbar() {
                 <motion.a whileHover={{y:-2}} whileTap={{scale:0.9}} href="/" target={'_blank'}>
                 <LinkedInIcon className={'w-6 mx-4'}/></motion.a>
                 <motion.a whileHover={{y:-2}} whileTap={{scale:0.9}} href="/" target={'_blank'}>
-                <PinterestIcon className={'w-6 mx-4'}/></motion.a>
+                <PinterestIcon className={'w-6 mx-4 bg-light rounded-full'}/></motion.a>
                 <motion.a whileHover={{y:-2}} whileTap={{scale:0.9}} href="/" target={'_blank'}>
                 <DribbbleIcon className={'w-6 ml-4'}/></motion.a>
                 <button className={`ml-3 p-1 flex items-center justify-center rounded-full
