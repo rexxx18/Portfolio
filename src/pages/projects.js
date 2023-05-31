@@ -20,7 +20,7 @@ const FeaturedProject=({type,title,summary,img,link,githubLink})=>{
         <article className='w-full relative flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-dark dark:border-light bg-light dark:bg-dark shadow-2xl p-12'>
             <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light rounded-br-3xl" />
             <Link className='w-1/2 cursor-pointer overflow-hidden rounded-lg' href={link} target='_blank'>
-                <FramerImage whileHover={{scale:1.05}} transition={{duration:0.2}} src={img} alt={title} className="w-full h-auto" />
+                <FramerImage whileHover={{scale:1.05}} transition={{duration:0.2}} src={img} alt={title} className="w-full h-auto" priority sizes="(max-width:768px) 100vw,(max-width:1200px) 50vw, 50vw" />
             </Link>
             <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
                 <span className='text-primary dark:text-primaryDark font-medium text-xl '>{type}</span>
